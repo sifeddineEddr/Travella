@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.titles {
+  font-weight: 700;
+  font-size: 150%;
+  margin: auto;
+  text-align: center;
+  padding: 2%;
+}
+
+.btn:hover {
+  background-color: #078df6;
+  color: white;
+  transition: 0.5s;
+}
+
+hr {
+  border: solid 1px #078df6;
+  width: 20%;
+  margin: auto;
+}
+
+button {
+  border: 2px solid #078df6;
+  color: #078df6;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 100px;
+  padding: 15px 32px;
+}
+
+/* Nav */
+
+.brandName {
+  letter-spacing: 2px;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #078df6;
+  transition: 0.6s;
+}
+
+nav span {
+  font-size: 150%;
+  font-weight: bold;
+  padding: 0 18px;
+  margin-left: 5px;
+  line-height: 80px;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25%;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+  padding-left: 10%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+a:hover {
+  color: aqua;
+  transition: 0.6s;
+}
+
+@media (max-width: 1048px) {
+  nav a {
+    font-size: 15px;
+    margin: 0 2px;
+  }
+
+  nav span {
+    padding: 0 10px;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav li {
+    padding: 0;
+  }
+}
+
+@keyframes ModalAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smoth Scrolling For Links */
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Sticky Navbar */
+
+nav.sticky {
+  background-color: white;
+  transition: 0.6s;
+}
+
+nav.sticky span,
+nav.sticky a {
+  color: #078df6;
+}
+
+nav.sticky a:hover {
+  color: aqua;
+  transition: 0.6s;
+}
+
+/* Home */
+
+.home {
+  background: url("img/homeBGImg.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 650px;
+}
+
+.homeTitle {
+  font-size: 250%;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0 2px 8px black;
+}
+
+.home .homeSlogan {
+  font-weight: 700;
+  color: white;
+  font-size: 115%;
+  margin-top: 0.5%;
+  text-shadow: 0 2px 8px black;
+}
+
+/* About */
+
+.about {
+  width: 75%;
+  margin: auto;
+  margin-top: 10%;
+  background-color: #078df6;
+  padding: 5% 5%;
+  border-radius: 20px;
+  color: white;
+}
+
+.textArea p {
+  margin-left: 4%;
+  text-align-last: center;
+  line-height: 150%;
+  padding-top: 5%;
+}
+
+.about hr {
+  width: 28%;
+  border: solid 1px white;
+}
+
+.about .titles {
+  color: white;
+}
+
+/* Destinations */
+
+.destinations {
+  padding-top: 10%;
+}
+
+.destinationsContainer {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 15%;
+}
+
+.destinationsContainer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.destinationsContainer div span {
+  font-weight: 600;
+  font-size: 140%;
+}
+
+/* Destinations Modals */
+
+.destinationsModals {
+  background-color: white;
+  justify-content: right;
+  padding: 5px 15px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: none;
+  overflow: auto;
+}
+
+.destinationsContent {
+  background-color: white;
+  padding: 3%;
+  width: 85%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation-name: ModalAnimation;
+  animation-duration: 0.5s;
+}
+
+.destinationModalContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 7% 3%;
+}
+
+.destinationModalContentDiv {
+  padding: 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.destinationModalContent img {
+  width: 200px;
+  height: auto;
+  box-sizing: border-box;
+  margin-right: 3%;
+}
+
+.destinationModalTitle {
+  font-weight: bold;
+  font-size: 170%;
+  color: #078df6;
+}
+
+/* Pricing */
+
+.pricing {
+  margin-bottom: 15%;
+}
+
+.pricingContainer {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 15%;
+}
+
+.pricingContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 2px white solid;
+  border-radius: 12px;
+  padding: 5%;
+  box-shadow: 0 11px 11px gray;
+}
+
+.pricingContainer li {
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 15%;
+  font-size: 110%;
+}
+
+.pricingContainer ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.price {
+  font-size: 140%;
+  font-weight: bolder;
+  color: #078df6;
+  padding-bottom: 10%;
+}
+
+.planTitle {
+  font-size: larger;
+  font-weight: 900;
+  color: rgb(46, 46, 46);
+  border-bottom: 2px solid rgb(46, 46, 46);
+  margin-bottom: 15%;
+}
+
+/* Pricing Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pricingModalContent {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  animation-name: ModalAnimation;
+  animation-duration: 0.5s;
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pricingModalClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.pricingModalClose:hover,
+.pricingModalClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pricingFormContainer {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#modalAllBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pricingForm {
+  overflow: hidden;
+  padding: 0 10%;
+}
+
+.formStep {
+  padding: 0.5rem;
+  max-width: 300px;
+  margin: 0 auto;
+  display: none;
+}
+
+#step1 {
+  gap: 10px;
+}
+
+#step1 button {
+  margin-top: 10%;
+  margin-left: 30%;
+}
+
+#step1 div {
+  display: flex;
+  flex-direction: column;
+}
+
+#step3 {
+  display: none;
+  flex-direction: column;
+}
+
+.btnDiv {
+  order: 2;
+}
+
+.textDiv {
+  order: 1;
+  gap: 20px;
+  margin-bottom: 10%;
+}
+
+.inputsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 5% 0;
+}
+
+.textDiv {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.confirmationLabel {
+  font-weight: 600;
+}
+
+input {
+  padding: 5%;
+  border: 0.5px solid;
+  border-radius: 6px;
+}
+
+.pricingForm select {
+  padding: 5%;
+  border-radius: 15px;
+}
+optgroup {
+  color: aqua;
+  font-size: 120%;
+}
+optgroup option,
+#plan option {
+  color: black;
+  font-size: 17px;
+}
+
+.formStep.active {
+  display: block;
+  animation: pricingSlideAnimation 450ms ease-in-out both;
+}
+
+@keyframes pricingSlideAnimation {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+
+footer {
+  margin-top: 5%;
+  padding-bottom: 5%;
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footerHr {
+  border: solid 1px rgb(94, 90, 90);
+  width: 70%;
+}
+
+.socialMediaIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.socialMediaIcons img {
+  padding-top: 2%;
+  width: 5%;
+}
